@@ -47,7 +47,7 @@ Re-arrange the blocks below so that the variables are declared and it prints out
 </script>
 
 ## Parsons 2
-Rearrange the code so that the it outputs "Cracking the Password" and one character of the password for every the length of the password:
+Rearrange the code so that the it outputs "Cracking the Password" and one character of the password for every the length of the password. E.g. Cracking the password p cracking the password a cracking the password s .....
 <div id="2-sortableTrash" class="sortable-code"></div> 
 <div id="2-sortable" class="sortable-code"></div> 
 <div style="clear:both;"></div> 
