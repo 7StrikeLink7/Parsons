@@ -6,6 +6,46 @@ layout: default
 title: For Loop Debug
 ---
 # Parsons Practice
+![image](https://user-images.githubusercontent.com/68385109/216836410-b7b6f44f-81a6-4793-adfd-1d2637e4b01a.png)
+
+<div id="0-sortableTrash" class="sortable-code"></div> 
+<div id="0-sortable" class="sortable-code"></div> 
+<div style="clear:both;"></div> 
+<p> 
+    <input id="0-feedbackLink" value="Get Feedback" type="button" /> 
+    <input id="0-newInstanceLink" value="Reset Problem" type="button" /> 
+</p> 
+<script type="text/javascript"> 
+(function(){
+  var initial = "print(&quot;First, read all the lines.&quot;)\n" +
+    "print(&quot;Second, Cut and Copy lines into the right order.&quot;)\n" +
+    "print(&quot;Third, take a screenshot.&quot;)\n" +
+    "print(&quot;Lastly, give yourself a pat on the back.&quot;)";
+  var parsonsPuzzle = new ParsonsWidget({
+    "sortableId": "0-sortable",
+    "max_wrong_lines": 10,
+    "grader": ParsonsWidget._graders.LineBasedGrader,
+    "exec_limit": 2500,
+    "can_indent": true,
+    "x_indent": 50,
+    "lang": "en",
+    "show_feedback": true,
+    "trashId": "0-sortableTrash"
+  });
+  parsonsPuzzle.init(initial);
+  parsonsPuzzle.shuffleLines();
+  $("#0-newInstanceLink").click(function(event){ 
+      event.preventDefault(); 
+      parsonsPuzzle.shuffleLines(); 
+  }); 
+  $("#0-feedbackLink").click(function(event){ 
+      event.preventDefault(); 
+      parsonsPuzzle.getFeedback(); 
+  }); 
+})(); 
+</script>
+
+
 ## Parsons 1 (Line Based Grader)
 Re-arrange the blocks below so that the variables are declared and it prints out the times tables grid using a for loop
 <div id="1-sortableTrash" class="sortable-code"></div> 
